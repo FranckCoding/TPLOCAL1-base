@@ -4,3 +4,54 @@
 @{
     ViewData["Title"] = "HN - TP LOCAL";
 }
+
+<section>
+    <form>
+        <div>
+            <p>Informations personnelles</p>
+            <table>
+                <tr>
+                    <th><label for="lname">Nom</label></th>
+                    <td><input type="text" id="lname" name="lname"/></td>
+                </tr>
+                <tr>
+                    <th><label for="fname">Prénom</label></th>
+                    <td><input type="text" id="fname" name="fname" /></td>
+                </tr>
+                <tr>
+                    <th><label for="usergender">Sexe</label></th>
+                    <td>
+                        <select id="usergender" name="usergender">
+                            <option value="" disabled selected>Selectionné un sexe</option>
+                            <option value="userman">Homme</option>
+                            <option value="userwoman">Femme</option>
+                            <option value="userother">Non-binaire</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="useradress">Adresse</label></th>
+                    <td><input type="text" id="useradress" name="useradress" /></td>
+                </tr>
+                <tr>
+                    <th><label for="userzipcode">Code Postale</label></th>
+                    <td><input type="text" id="userzipcode" name="userzipcode" /></td>
+                </tr>
+                <tr>
+                    <th><label for="usertown">Ville</label></th>
+                    <td><input type="text" id="usertown" name="usertown" /></td>
+                </tr>
+                <tr>
+                    <th><label for="useremail">Adresse email</label></th>
+                    <td><input type="text" id="useremail" name="useremail" /></td>
+                </tr>
+            
+            </table>
+        </div>
+
+        <div>
+            <table>
+            </table>
+        </div>
+    </form>
+</section>
