@@ -3,11 +3,11 @@
 *@
 @{
     ViewData["Title"] = "HN - TP LOCAL";
-    string emailPattern = "^([\\w]+)@([\\w]+)\\.( [\\w]+)$";
+    string emailPattern = "^([\\w]+)@([\\w]+)\\.([\\w]+)$";
 }
 
 <section>
-    <form>
+    <form action="/ValidationFormulaire.cshtml">
         <div class="tableform">
             <p id="titleinformations">Informations personnelles</p>
             <table>
@@ -84,5 +84,6 @@
                 </tr>
             </table>
         </div>
+        <input type="submit" value="Valider" />
     </form>
 </section>
