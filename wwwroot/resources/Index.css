@@ -39,3 +39,33 @@ section
 {
     margin-left: 170px;
 }
+
+table, th, td
+{
+    border: 1px solid black;
+}
+
+th
+{
+    text-align: left;
+}
+
+.tableform p 
+{
+    text-align: center;
+}
+
+#titleinformations 
+{
+    width: 279px;
+}
+
+#titletraining
+{
+    width: 392px;
+}
+
+#titleopinion 
+{
+    width: 301px;
+}
