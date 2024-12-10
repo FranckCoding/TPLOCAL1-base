@@ -12,16 +12,16 @@
             <table>
                 <tr>
                     <th><label for="lname">Nom</label></th>
-                    <td><input type="text" id="lname" name="lname"/></td>
+                    <td><input type="text" id="lname" name="lname" required /></td>
                 </tr>
                 <tr>
                     <th><label for="fname">Prénom</label></th>
-                    <td><input type="text" id="fname" name="fname" /></td>
+                    <td><input type="text" id="fname" name="fname" required /></td>
                 </tr>
                 <tr>
                     <th><label for="usergender">Sexe</label></th>
                     <td>
-                        <select id="usergender" name="usergender">
+                        <select id="usergender" name="usergender" required>
                             <option value="" disabled selected>Selectionné un sexe</option>
                             <option value="userman">Homme</option>
                             <option value="userwoman">Femme</option>
@@ -31,19 +31,19 @@
                 </tr>
                 <tr>
                     <th><label for="useradress">Adresse</label></th>
-                    <td><input type="text" id="useradress" name="useradress" /></td>
+                    <td><input type="text" id="useradress" name="useradress" required /></td>
                 </tr>
                 <tr>
                     <th><label for="userzipcode">Code Postale</label></th>
-                    <td><input type="text" id="userzipcode" name="userzipcode" /></td>
+                    <td><input type="text" id="userzipcode" name="userzipcode" required /></td>
                 </tr>
                 <tr>
                     <th><label for="usertown">Ville</label></th>
-                    <td><input type="text" id="usertown" name="usertown" /></td>
+                    <td><input type="text" id="usertown" name="usertown" required /></td>
                 </tr>
                 <tr>
                     <th><label for="useremail">Adresse email</label></th>
-                    <td><input type="text" id="useremail" name="useremail" /></td>
+                    <td><input type="text" id="useremail" name="useremail" required /></td>
                 </tr>
             
             </table>
@@ -54,12 +54,12 @@
             <table>
                 <tr>
                    <th><label for="startdate">Date de début formation</label></th>
-                   <td><input type="date" id="startdate" name="startdate" /></td>
+                   <td><input type="date" id="startdate" name="startdate" required /></td>
                 </tr>
                 <tr>
                     <th><label for="coursename">Formation suivie</label></th>
                     <td>
-                        <select id="coursename" name="coursename">
+                        <select id="coursename" name="coursename" required>
                             <option value="" disabled selected>Sélectionner une formation</option>
                             <option value="cobol">Formation Cobol</option>
                             <option value="dotnet">Formation C#</option>
