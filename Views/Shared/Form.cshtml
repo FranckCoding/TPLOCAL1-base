@@ -3,6 +3,7 @@
 *@
 @{
     ViewData["Title"] = "HN - TP LOCAL";
+    string emailPattern = "^([\\w]+)@([\\w]+)\\.( [\\w]+)$";
 }
 
 <section>
@@ -35,7 +36,7 @@
                 </tr>
                 <tr>
                     <th><label for="userzipcode">Code Postale</label></th>
-                    <td><input type="text" id="userzipcode" name="userzipcode" required maxlength="5" pattern="[0-9]{5}" /></td>
+                    <td><input type="text" id="userzipcode" name="userzipcode" maxlength="5" pattern="[0-9]{5}" required /></td>
                 </tr>
                 <tr>
                     <th><label for="usertown">Ville</label></th>
@@ -43,7 +44,7 @@
                 </tr>
                 <tr>
                     <th><label for="useremail">Adresse email</label></th>
-                    <td><input type="text" id="useremail" name="useremail" required /></td>
+                    <td><input type="email" id="useremail" name="useremail" pattern="@emailPattern" required /></td>
                 </tr>
             
             </table>
