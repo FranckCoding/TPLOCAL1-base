@@ -7,44 +7,44 @@
 }
 
 <section>
-    <form action="/ValidationFormulaire.cshtml">
+    <form action="/Home/ValidationFormulaire" method="post">
         <div class="tableform">
             <p id="titleinformations">Informations personnelles</p>
             <table>
                 <tr>
-                    <th><label for="lname">Nom</label></th>
-                    <td><input type="text" id="lname" name="lname" placeholder="Durand" required /></td>
+                    <th><label for="LastName">Nom</label></th>
+                    <td><input type="text" id="LastName" name="LastName" placeholder="Durand" /></td>
                 </tr>
                 <tr>
-                    <th><label for="fname">Prénom</label></th>
-                    <td><input type="text" id="fname" name="fname" placeholder="René" required /></td>
+                    <th><label for="FirstName">Prénom</label></th>
+                    <td><input type="text" id="FirstName" name="FirstName" placeholder="René" /></td>
                 </tr>
                 <tr>
-                    <th><label for="usergender">Sexe</label></th>
+                    <th><label for="UserGender">Sexe</label></th>
                     <td>
-                        <select id="usergender" name="usergender" required>
+                        <select id="UserGender" name="UserGender">
                             <option value="" disabled selected>Selectionné un sexe</option>
-                            <option value="userman">Homme</option>
-                            <option value="userwoman">Femme</option>
-                            <option value="userother">Non-binaire</option>
+                            <option value="Homme">Homme</option>
+                            <option value="Femme">Femme</option>
+                            <option value="Non-Binaire">Non-binaire</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
-                    <th><label for="useradress">Adresse</label></th>
-                    <td><input type="text" id="useradress" name="useradress" placeholder="1 rue Maurice Thorez" required /></td>
+                    <th><label for="UserAdress">Adresse</label></th>
+                    <td><input type="text" id="UserAdress" name="UserAdress" placeholder="1 rue Maurice Thorez" /></td>
                 </tr>
                 <tr>
-                    <th><label for="userzipcode">Code Postale</label></th>
-                    <td><input type="text" id="userzipcode" name="userzipcode" placeholder="75000" maxlength="5" pattern="[0-9]{5}" required /></td>
+                    <th><label for="UserZipCode">Code Postale</label></th>
+                    <td><input type="text" id="UserZipCode" name="UserZipCode" placeholder="75000" maxlength="5" pattern="[0-9]{5}" /></td>
                 </tr>
                 <tr>
-                    <th><label for="usertown">Ville</label></th>
-                    <td><input type="text" id="usertown" name="usertown" placeholder="Paris" required /></td>
+                    <th><label for="UserTown">Ville</label></th>
+                    <td><input type="text" id="UserTown" name="UserTown" placeholder="Paris" /></td>
                 </tr>
                 <tr>
-                    <th><label for="useremail">Adresse email</label></th>
-                    <td><input type="email" id="useremail" name="useremail" placeholder="exemple@gmail.com" pattern="@emailPattern" required /></td>
+                    <th><label for="UserEmail">Adresse email</label></th>
+                    <td><input type="email" id="UserEmail" name="UserEmail" placeholder="exemple@gmail.com" pattern="@emailPattern" /></td>
                 </tr>
             
             </table>
@@ -54,17 +54,17 @@
             <p id="titletraining">Informations formation suivie</p>
             <table>
                 <tr>
-                   <th><label for="startdate">Date de début formation</label></th>
-                   <td><input type="date" id="startdate" name="startdate" max="2021-01-01" required /></td>
+                   <th><label for="StartDate">Date de début formation</label></th>
+                   <td><input type="date" id="StartDate" name="StartDate" max="2021-01-01" /></td>
                 </tr>
                 <tr>
-                    <th><label for="coursename">Formation suivie</label></th>
+                    <th><label for="CourseName">Formation suivie</label></th>
                     <td>
-                        <select id="coursename" name="coursename" required>
+                        <select id="CourseName" name="CourseName">
                             <option value="" disabled selected>Sélectionner une formation</option>
-                            <option value="cobol">Formation Cobol</option>
-                            <option value="dotnet">Formation C#</option>
-                            <option value="doubleskills">Formation double compétences</option>
+                            <option value="Formation Cobol">Formation Cobol</option>
+                            <option value="Formation C#">Formation C#</option>
+                            <option value="Formation double compétences">Formation double compétences</option>
                         </select>
                     </td>
                 </tr>
@@ -75,12 +75,12 @@
             <p id="titleopinion">Avis sur la formation</p>
             <table>
                 <tr>
-                    <th><label for="opinioncobol">Formation Cobol</label></th>
-                    <td><input type="text" id="opinioncobol" name="opinioncobol" /></td>
+                    <th><label for="OpinionCobol">Formation Cobol</label></th>
+                    <td><input type="text" id="OpinionCobol" name="OpinionCobol" /></td>
                 </tr>
                 <tr>
-                    <th><label for="opiniondotnet">Formation C#</label></th>
-                    <td><input type="text" id="opiniondotnet" name="opiniondotnet" /></td>
+                    <th><label for="OpinionDotnet">Formation C#</label></th>
+                    <td><input type="text" id="OpinionDotnet" name="OpinionDotnet" /></td>
                 </tr>
             </table>
         </div>

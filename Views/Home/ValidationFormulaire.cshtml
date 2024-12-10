@@ -1,0 +1,74 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model TPLOCAL1.Models.FormulaireModel
+
+@{
+    ViewData["Title"] = "HN - TP LOCAL";
+   }
+
+<section>
+    <div class="tableform">
+        <p id="titleinformations">Informations personnelles</p>
+        <table>
+            <tr>
+                <th>Nom</th>
+                <td>@Html.DisplayFor(Model => Model.LastName)</td>
+            </tr>
+            <tr>
+                <th>Prénom</th>
+                <td>@Html.DisplayFor(Model => Model.FirstName)</td>
+            </tr>
+            <tr>
+                <th>Sexe</th>
+                <td>@Html.DisplayFor(Model => Model.UserGender)</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>@Html.DisplayFor(Model => Model.UserAdress)</td>
+            </tr>
+            <tr>
+                <th>Code Postale</th>
+                <td>@Html.DisplayFor(Model => Model.UserZipCode)</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>@Html.DisplayFor(Model => Model.UserTown)</td>
+            </tr>
+            <tr>
+                <th>Adresse email</th>
+                <td>@Html.DisplayFor(Model => Model.UserEmail)</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="tableform">
+        <p id="titletraining">Informations formation suivie</p>
+        <table>
+            <tr>
+                <th>Date de début formation</th>
+                <td>@Html.DisplayFor(Model => Model.StartDate)</td>
+            </tr>
+            <tr>
+                <th>Formation suivie</th>
+                <td>@Html.DisplayFor(Model => Model.CourseName)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="tableform">
+        <p id="titleopinion">Avis sur la formation</p>
+        <table>
+            <tr>
+                <th>Formation Cobol</th>
+                <td>@Html.DisplayFor(Model => Model.OpinionCobol)</td>
+            </tr>
+            <tr>
+                <th>Formation C#</th>
+                <td>@Html.DisplayFor(Model => Model.OpinionDotnet)</td>
+            </tr>
+        </table>
+    </div>
+</section>
