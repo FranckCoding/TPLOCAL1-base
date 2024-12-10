@@ -1,28 +1,46 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+
+@model TPLOCAL1.Models.FormulaireModel
+
 @{
     ViewData["Title"] = "HN - TP LOCAL";
-    string emailPattern = "^([\\w]+)@([\\w]+)\\.([\\w]+)$";
 }
 
 <section>
+    @if (ViewData["Message"] != null)
+    {
+        <div class="alert-form">
+            @ViewData["Message"] <br />
+            @Html.ValidationMessageFor(Model => Model.LastName) <br />
+            @Html.ValidationMessageFor(Model => Model.FirstName) <br />
+            @Html.ValidationMessageFor(Model => Model.UserGender) <br />
+            @Html.ValidationMessageFor(Model => Model.UserAdress) <br />
+            @Html.ValidationMessageFor(Model => Model.UserZipCode) <br />
+            @Html.ValidationMessageFor(Model => Model.UserTown) <br />
+            @Html.ValidationMessageFor(Model => Model.UserEmail) <br />
+            @Html.ValidationMessageFor(Model => Model.StartDate) <br />
+            @Html.ValidationMessageFor(Model => Model.CourseName)
+        </div>
+    }
+
     <form action="/Home/ValidationFormulaire" method="post">
         <div class="tableform">
             <p id="titleinformations">Informations personnelles</p>
             <table>
                 <tr>
                     <th><label for="LastName">Nom</label></th>
-                    <td><input type="text" id="LastName" name="LastName" placeholder="Durand" /></td>
+                    <td><input type="text" id="LastName" name="LastName" placeholder="Durand" value="@Model?.LastName" /></td>
                 </tr>
                 <tr>
                     <th><label for="FirstName">Prénom</label></th>
-                    <td><input type="text" id="FirstName" name="FirstName" placeholder="René" /></td>
+                    <td><input type="text" id="FirstName" name="FirstName" placeholder="René" value="@Model?.FirstName" /></td>
                 </tr>
                 <tr>
                     <th><label for="UserGender">Sexe</label></th>
                     <td>
-                        <select id="UserGender" name="UserGender">
+                        <select id="UserGender" name="UserGender" value="@Model?.UserGender">
                             <option value="" disabled selected>Selectionné un sexe</option>
                             <option value="Homme">Homme</option>
                             <option value="Femme">Femme</option>
@@ -32,19 +50,19 @@
                 </tr>
                 <tr>
                     <th><label for="UserAdress">Adresse</label></th>
-                    <td><input type="text" id="UserAdress" name="UserAdress" placeholder="1 rue Maurice Thorez" /></td>
+                    <td><input type="text" id="UserAdress" name="UserAdress" placeholder="1 rue Maurice Thorez" value="@Model?.UserAdress" /></td>
                 </tr>
                 <tr>
                     <th><label for="UserZipCode">Code Postale</label></th>
-                    <td><input type="text" id="UserZipCode" name="UserZipCode" placeholder="75000" maxlength="5" pattern="[0-9]{5}" /></td>
+                    <td><input type="text" id="UserZipCode" name="UserZipCode" placeholder="75000" maxlength="5" pattern="[0-9]{5}" value="@Model?.UserZipCode" /></td>
                 </tr>
                 <tr>
                     <th><label for="UserTown">Ville</label></th>
-                    <td><input type="text" id="UserTown" name="UserTown" placeholder="Paris" /></td>
+                    <td><input type="text" id="UserTown" name="UserTown" placeholder="Paris" value="@Model?.UserTown" /></td>
                 </tr>
                 <tr>
                     <th><label for="UserEmail">Adresse email</label></th>
-                    <td><input type="email" id="UserEmail" name="UserEmail" placeholder="exemple@gmail.com" pattern="@emailPattern" /></td>
+                    <td><input type="email" id="UserEmail" name="UserEmail" placeholder="exemple@gmail.com" value="@Model?.UserEmail" /></td>
                 </tr>
             
             </table>
@@ -55,7 +73,7 @@
             <table>
                 <tr>
                    <th><label for="StartDate">Date de début formation</label></th>
-                   <td><input type="date" id="StartDate" name="StartDate" max="2021-01-01" /></td>
+                    <td><input type="date" id="StartDate" name="StartDate" max="2021-01-01" /></td>
                 </tr>
                 <tr>
                     <th><label for="CourseName">Formation suivie</label></th>

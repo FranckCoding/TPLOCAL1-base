@@ -42,7 +42,16 @@ namespace TPLOCAL1.Controllers
             //TODO : test if model's fields are set
             //if not, display an error message and stay on the form page
             //else, call ValidationForm with the datas set by the user
-            return View(model);
+            if (!ModelState.IsValid)
+            {
+                ViewData["Message"] = "Formulaire invalide. Veuillez corriger les erreurs ci-dessous:";
+
+                return View("~/Views/Shared/Form.cshtml", model);
+            }
+            else
+            {
+                return View(model);
+            }
 
         }
     }
