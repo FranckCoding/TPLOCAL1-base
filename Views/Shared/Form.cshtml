@@ -50,7 +50,23 @@
         </div>
 
         <div>
+            <p>Informations formation suivie</p>
             <table>
+                <tr>
+                   <th><label for="startdate">Date de début formation</label></th>
+                   <td><input type="date" id="startdate" name="startdate" /></td>
+                </tr>
+                <tr>
+                    <th><label for="coursename">Formation suivie</label></th>
+                    <td>
+                        <select id="coursename" name="coursename">
+                            <option value="" disabled selected>Sélectionner une formation</option>
+                            <option value="cobol">Formation Cobol</option>
+                            <option value="dotnet">Formation C#</option>
+                            <option value="doubleskills">Formation double compétences</option>
+                        </select>
+                    </td>
+                </tr>
             </table>
         </div>
     </form>
