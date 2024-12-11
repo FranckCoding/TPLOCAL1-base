@@ -21,7 +21,7 @@ namespace TPLOCAL1.Controllers
                 //Call different pages, according to the id pass as parameter
                 switch (id)
                 {
-                    case "OpinionList":
+                    case "ListeAvis":
                         //TODO : code reading of the xml files provide
                         return View(id);
                     case "Form":
