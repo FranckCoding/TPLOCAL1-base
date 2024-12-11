@@ -3,14 +3,32 @@
 *@
 @{
     ViewData["Title"] = "HN - TP LOCAL";
+    var xmlData = (System.Xml.Linq.XDocument)ViewData["XmlData"];
 }
 
 <section>
+    <p id="titleliste">Liste</p>
     <table>
         <tr>
             <th>Nom</th>
             <th>Prénom</th>
             <th>Avis donné</th>
         </tr>
+        @foreach (var row in xmlData.Descendants("row"))
+        {
+            <tr>
+                <td>@row.Element("Nom")?.Value</td>
+                <td>@row.Element("Prenom")?.Value</td>
+                @if (@row.Element("Avis")?.Value == "O")
+                {
+                    <td id="noticegiven">Oui</td>
+                }
+                else
+                {
+                    <td id="noticenotgiven">Non</td>
+                }
+                
+            </tr>
+        }
     </table>
 </section>

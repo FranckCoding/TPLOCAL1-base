@@ -69,3 +69,19 @@ th
 {
     width: 301px;
 }
+
+#noticegiven 
+{
+    background-color: green;
+}
+
+#noticenotgiven
+{
+    background-color: red;
+}
+
+#titleliste
+{
+    width: 196px;
+    text-align: center;
+}

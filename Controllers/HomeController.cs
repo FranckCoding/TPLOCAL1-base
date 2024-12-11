@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
 using TPLOCAL1.Models;
+using System.Xml.Linq;
 
 //Subject is find at the root of the project and the logo in the wwwroot/ressources folders of the solution
 //--------------------------------------------------------------------------------------
@@ -23,6 +24,10 @@ namespace TPLOCAL1.Controllers
                 {
                     case "ListeAvis":
                         //TODO : code reading of the xml files provide
+                        string filePath = Path.Combine(Directory.GetCurrentDirectory(), "XlmFile", "DataAvis.xml");
+                        XDocument xmlDoc = XDocument.Load(filePath);
+
+                        ViewData["XmlData"] = xmlDoc;
                         return View(id);
                     case "Form":
                         //TODO : call the Form view with data model empty
