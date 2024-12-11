@@ -21,9 +21,10 @@ namespace TPLOCAL1.Controllers
                 //Call different pages, according to the id pass as parameter
                 switch (id)
                 {
-                    case "OpinionList":
+                    case "ListeAvis":
                         //TODO : code reading of the xml files provide
-                        return View(id);
+                        List<Opinion> opinionList = new OpinionList().GetAvis("XlmFile/DataAvis.xml");
+                        return View(id, opinionList);
                     case "Form":
                         //TODO : call the Form view with data model empty
                         return View(id);
@@ -37,12 +38,21 @@ namespace TPLOCAL1.Controllers
 
         //methode to send datas from form to validation page
         [HttpPost]
-        public ActionResult ValidationFormulaire(/*model*/)
+        public ActionResult ValidationFormulaire(FormulaireModel model)
         {
             //TODO : test if model's fields are set
             //if not, display an error message and stay on the form page
             //else, call ValidationForm with the datas set by the user
-            return null;
+            if (!ModelState.IsValid)
+            {
+                ViewData["Message"] = "Formulaire invalide. Veuillez corriger les erreurs ci-dessous:";
+
+                return View("~/Views/Shared/Form.cshtml", model);
+            }
+            else
+            {
+                return View(model);
+            }
 
         }
     }

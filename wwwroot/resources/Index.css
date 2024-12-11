@@ -1,0 +1,92 @@
+﻿.image
+{
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+h1 
+{
+    margin-right: 170px;
+    margin-left: 170px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+nav 
+{
+    width: 150px;
+    border: 2px solid #8c014c;
+    background-color: #8c014c;
+    color: white;
+    float: left;
+}
+
+li 
+{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+a 
+{
+    color: chocolate;
+}
+
+section
+{
+    margin-left: 170px;
+}
+
+table, th, td
+{
+    border: 1px solid black;
+}
+
+th
+{
+    text-align: left;
+}
+
+.tableform p 
+{
+    text-align: center;
+}
+
+.tablevalidation td
+{
+    width: 214px;
+}
+
+#titleinformations 
+{
+    width: 279px;
+}
+
+#titletraining
+{
+    width: 392px;
+}
+
+#titleopinion 
+{
+    width: 301px;
+}
+
+#noticegiven 
+{
+    background-color: green;
+}
+
+#noticenotgiven
+{
+    background-color: red;
+}
+
+#titleliste
+{
+    width: 196px;
+    text-align: center;
+}

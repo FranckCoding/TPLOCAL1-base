@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/resources/Index.css" />
+</head>
+<body>
+    <header>
+        <a href="/"><img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" /></a>
+        <h1>@ViewData["TitleH1"]</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/Home/Index/Form">Remplir le formulaire</a></li>
+            <li><a href="/Home/Index/ListeAvis">Liste avis</a></li>
+        </ul>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
