@@ -55,6 +55,11 @@ th
     text-align: center;
 }
 
+.tablevalidation td
+{
+    width: 214px;
+}
+
 #titleinformations 
 {
     width: 279px;
