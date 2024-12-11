@@ -1,10 +1,13 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+
+@model List<TPLOCAL1.Models.Opinion>
+
 @{
     ViewData["Title"] = "Liste des avis";
     ViewData["TitleH1"] = ViewData["Title"];
-    var xmlData = (System.Xml.Linq.XDocument)ViewData["XmlData"];
+    List<TPLOCAL1.Models.Opinion> opinionList = Model;
 }
 
 <section>
@@ -15,12 +18,12 @@
             <th>Prénom</th>
             <th>Avis donné</th>
         </tr>
-        @foreach (var row in xmlData.Descendants("row"))
+        @foreach (var row in opinionList)
         {
             <tr>
-                <td>@row.Element("Nom")?.Value</td>
-                <td>@row.Element("Prenom")?.Value</td>
-                @if (@row.Element("Avis")?.Value == "O")
+                <td>@row.LastName</td>
+                <td>@row.FirstName</td>
+                @if (@row.OpinionGiven == "O")
                 {
                     <td id="noticegiven">Oui</td>
                 }
