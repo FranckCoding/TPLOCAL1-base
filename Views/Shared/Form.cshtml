@@ -14,15 +14,6 @@
     {
         <div class="alert-form">
             @ViewData["Message"] <br />
-            @Html.ValidationMessageFor(Model => Model.LastName) <br />
-            @Html.ValidationMessageFor(Model => Model.FirstName) <br />
-            @Html.ValidationMessageFor(Model => Model.UserGender) <br />
-            @Html.ValidationMessageFor(Model => Model.UserAdress) <br />
-            @Html.ValidationMessageFor(Model => Model.UserZipCode) <br />
-            @Html.ValidationMessageFor(Model => Model.UserTown) <br />
-            @Html.ValidationMessageFor(Model => Model.UserEmail) <br />
-            @Html.ValidationMessageFor(Model => Model.StartDate) <br />
-            @Html.ValidationMessageFor(Model => Model.CourseName)
         </div>
     }
 
@@ -32,11 +23,17 @@
             <table>
                 <tr>
                     <th><label for="LastName">Nom</label></th>
-                    <td><input type="text" id="LastName" name="LastName" placeholder="Durand" value="@Model?.LastName" /></td>
+                    <td>
+                        <input type="text" id="LastName" name="LastName" placeholder="Durand" value="@Model?.LastName" />
+                        <em>@Html.ValidationMessageFor(Model => Model.LastName)</em>
+                    </td>
                 </tr>
                 <tr>
                     <th><label for="FirstName">Prénom</label></th>
-                    <td><input type="text" id="FirstName" name="FirstName" placeholder="René" value="@Model?.FirstName" /></td>
+                    <td>
+                        <input type="text" id="FirstName" name="FirstName" placeholder="René" value="@Model?.FirstName" />
+                        <em>@Html.ValidationMessageFor(Model => Model.FirstName)</em>
+                    </td>
                 </tr>
                 <tr>
                     <th><label for="UserGender">Sexe</label></th>
@@ -47,23 +44,36 @@
                             <option value="Femme">Femme</option>
                             <option value="Non-Binaire">Non-binaire</option>
                         </select>
+                        <em>@Html.ValidationMessageFor(Model => Model.UserGender)</em>
                     </td>
                 </tr>
                 <tr>
                     <th><label for="UserAdress">Adresse</label></th>
-                    <td><input type="text" id="UserAdress" name="UserAdress" placeholder="1 rue Maurice Thorez" value="@Model?.UserAdress" /></td>
+                    <td>
+                        <input type="text" id="UserAdress" name="UserAdress" placeholder="1 rue Maurice Thorez" value="@Model?.UserAdress" />
+                        <em>@Html.ValidationMessageFor(Model => Model.UserAdress)</em>
+                    </td>
                 </tr>
                 <tr>
                     <th><label for="UserZipCode">Code Postale</label></th>
-                    <td><input type="text" id="UserZipCode" name="UserZipCode" placeholder="75000" maxlength="5" value="@Model?.UserZipCode" /></td>
+                    <td>
+                        <input type="text" id="UserZipCode" name="UserZipCode" placeholder="75000" maxlength="5" value="@Model?.UserZipCode" />
+                        <em>@Html.ValidationMessageFor(Model => Model.UserZipCode)</em>
+                    </td>
                 </tr>
                 <tr>
                     <th><label for="UserTown">Ville</label></th>
-                    <td><input type="text" id="UserTown" name="UserTown" placeholder="Paris" value="@Model?.UserTown" /></td>
+                    <td>
+                        <input type="text" id="UserTown" name="UserTown" placeholder="Paris" value="@Model?.UserTown" />
+                        <em>@Html.ValidationMessageFor(Model => Model.UserTown)</em>
+                    </td>
                 </tr>
                 <tr>
                     <th><label for="UserEmail">Adresse email</label></th>
-                    <td><input type="email" id="UserEmail" name="UserEmail" placeholder="exemple@gmail.com" value="@Model?.UserEmail" /></td>
+                    <td>
+                        <input type="email" id="UserEmail" name="UserEmail" placeholder="exemple@gmail.com" value="@Model?.UserEmail" />
+                        <em>@Html.ValidationMessageFor(Model => Model.UserEmail)</em>
+                    </td>
                 </tr>
             
             </table>
@@ -74,7 +84,10 @@
             <table>
                 <tr>
                    <th><label for="StartDate">Date de début formation</label></th>
-                    <td><input type="date" id="StartDate" name="StartDate" max="2021-01-01" /></td>
+                    <td>
+                        <input type="date" id="StartDate" name="StartDate" max="2021-01-01" />
+                        <em>@Html.ValidationMessageFor(Model => Model.StartDate)</em>
+                    </td>
                 </tr>
                 <tr>
                     <th><label for="CourseName">Formation suivie</label></th>
@@ -85,6 +98,7 @@
                             <option value="Formation C#">Formation C#</option>
                             <option value="Formation double compétences">Formation double compétences</option>
                         </select>
+                        <em>@Html.ValidationMessageFor(Model => Model.CourseName)</em>
                     </td>
                 </tr>
             </table>

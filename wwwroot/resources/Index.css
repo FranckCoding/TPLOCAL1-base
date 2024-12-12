@@ -50,12 +50,22 @@ th
     text-align: left;
 }
 
-.tableform p 
+.tableform p, .tablevalidation p
 {
     text-align: center;
 }
 
-.tablevalidation td
+.tableform em 
+{
+    color: #a91b1b;
+}
+
+#tablepersonnelvalidation td, #tableavisvalidation td
+{
+    width: 181px;
+}
+
+#tableformationvalidation td 
 {
     width: 214px;
 }
@@ -89,4 +99,10 @@ th
 {
     width: 196px;
     text-align: center;
+}
+
+.alert-form
+{
+    width: 400px;
+    color: #a91b1b;
 }
